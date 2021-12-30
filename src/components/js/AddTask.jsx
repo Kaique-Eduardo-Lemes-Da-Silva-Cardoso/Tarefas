@@ -10,8 +10,12 @@ const AddTask = ({ handleTaskAdd }) => {
 
   const handleAddTaskClick = () => {
     console.log(inputData);
-    handleTaskAdd(inputData);
+    inputData.trim();
+    if (inputData !=="") {
+      handleTaskAdd(inputData);
     setInputData("");
+    }
+   
   };
   
 

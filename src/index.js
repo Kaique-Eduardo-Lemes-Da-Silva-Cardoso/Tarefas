@@ -9,12 +9,14 @@ import {
   Route
 } from "react-router-dom";
 
+
+
 ReactDOM.render(
   <Router>
     
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/Info" element={<Info />} />
+      <Route path="/" element={<App  />} />
+      <Route path="/Info" element={<Info  />} />
      
     </Routes>
   </Router>,
