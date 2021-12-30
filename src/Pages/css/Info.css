@@ -1,0 +1,28 @@
+.btn{
+    flex:1;
+}
+h1{flex:1;}
+.container{
+   
+    max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 2px solid chartreuse;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow:  0px 0px 50px  30px chartreuse ;
+ 
+}
+.c{
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+.texto{
+    border: solid 4px gray;
+    background-color: #444;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    color:#eee;
+}
