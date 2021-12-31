@@ -3,7 +3,7 @@ fonte e aula do projeto feito: https://www.youtube.com/watch?v=ErjWNvP6mko&t=552
 Tecnologias:
 React, js, Axios, API JSONPlaceHolder, React-Router-Dom   <p>Botão apenas retorna a pagina<p>
 <h1> Home: <h1>
-  <p>adiciona uma tarefa, marca como conclida com o detalhe verde, botão info manda para pagina info, botão x esclui a tarefa<p>
+  <p>adiciona uma tarefa, marca como conclida com o detalhe verde, botão info manda para pagina info, botão x exclui a tarefa<p>
   
 ![image](https://user-images.githubusercontent.com/65860424/147841145-cd128255-fd04-4880-8280-8482e7690142.png)
  
