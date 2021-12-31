@@ -28,24 +28,32 @@ const App = () => {
     },
   ]);
 
-  useEffect(() => {
-    const fetchTasks =  () =>{
-     axios.get("https://jsonplaceholder.typicode.com/todos")
-      .then(response => {
-        let data = tasks.concat(response.data);
-        console.log(data);
-      setTasks(data);/*commente essa linha para ver o show*/
-      })
+
+  const fetchTasks =  () =>{
+    axios.get("https://jsonplaceholder.typicode.com/todos")
+     .then(response => {
+       let data = tasks.concat(response.data);
+       console.log(data);
+     setTasks(data);/*commente essa linha para ver o show*/
+     })
 .catch(error =>{ console.log(error)})
-      }
+     }
+
+
+  useEffect(() => {
+   
       fetchTasks();
 
+    
+  }, []);
+
+  const bagunça = () =>{
     tasks.map((task) => {
       console.log(`Task: id: ${task.id} titulo: ${task.title} 
       completed: ${task.completed}`);
     });
-  }, []);
-
+  }
+  
   const handleTaskAdd = (taskTitle) => {
     const newtasks = [
       ...tasks,

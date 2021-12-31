@@ -6,7 +6,7 @@ const Tasks = ({tasks,handleTaskClick,handleTaskDelete}) => {
   return (
     <div>
       {tasks.map((task) => (
-        <Task key={task.id}task={task} handleTaskClick={handleTaskClick} handleTaskDelete={handleTaskDelete}/>
+        <Task task={task} handleTaskClick={handleTaskClick} handleTaskDelete={handleTaskDelete}/>
       ))}
     </div>
   );
