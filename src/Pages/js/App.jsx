@@ -32,7 +32,7 @@ const App = () => {
     const fetchTasks =  () =>{
      axios.get("https://jsonplaceholder.typicode.com/todos")
       .then(response => {
-        let data = response.data;
+        let data = tasks.concat(response.data);
         console.log(data);
       setTasks(data);/*commente essa linha para ver o show*/
       })
