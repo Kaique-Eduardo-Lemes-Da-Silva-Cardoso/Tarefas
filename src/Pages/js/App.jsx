@@ -45,6 +45,8 @@ axios.post(`${baseURL}/DeleteOneTask`,taskId)
 }
 
 
+
+
   useEffect(() => {
     fetchTasks();
   }, []);
@@ -77,8 +79,17 @@ axios.post(`${baseURL}/DeleteOneTask`,taskId)
   };
 
   const handleTaskClick = (taskId) => {
+
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
+        const update = {"id":taskId,"title":task.tile,"check": !task.completed}
+        console.log(update)
+         axios.post(`${baseURL}/UpdateTask`,update)
+         .then((response)=>{ 
+           console.log(response.data)
+         })
+         .catch(error => {console.log(error)})
+
         return { ...task, completed: !task.completed };
       }
       return task;
