@@ -23,6 +23,17 @@ const App = () => {
      }
 
 
+const addTaskToDatabase = (taskTitle) =>{
+axios.post("",taskTitle)
+.then(response =>{
+  let data = tasks.concat(response.data)
+  console.log(data)
+})
+.catch(error => {console.log(error)})
+}
+
+
+
   useEffect(() => {
    
       fetchTasks();
@@ -38,6 +49,7 @@ const App = () => {
   }
   
   const handleTaskAdd = (taskTitle) => {
+    
     const newtasks = [
       ...tasks,
       {
