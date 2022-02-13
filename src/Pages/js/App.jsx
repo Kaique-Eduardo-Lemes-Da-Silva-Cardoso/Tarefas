@@ -35,17 +35,17 @@ const App = () => {
       });
   };
 
-const deleteOnDB = (taskId) =>{
-taskId = {"id":taskId}
-axios.post(`${baseURL}/DeleteOneTask`,taskId)
-.then((response)=>{
-  console.log(response.data)
-})
-.catch(error => {console.log(error)})
-}
-
-
-
+  const deleteOnDB = (taskId) => {
+    taskId = { id: taskId };
+    axios
+      .post(`${baseURL}/DeleteOneTask`, taskId)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     fetchTasks();
@@ -79,16 +79,18 @@ axios.post(`${baseURL}/DeleteOneTask`,taskId)
   };
 
   const handleTaskClick = (taskId) => {
-
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
-        const update = {"id":taskId,"title":task.tile,"check": !task.completed}
-        console.log(update)
-         axios.post(`${baseURL}/UpdateTask`,update)
-         .then((response)=>{ 
-           console.log(response.data)
-         })
-         .catch(error => {console.log(error)})
+        const update = { id: taskId, title: task.tile, check: !task.completed };
+        console.log(update);
+        axios
+          .post(`${baseURL}/UpdateTask`, update)
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
 
         return { ...task, completed: !task.completed };
       }
