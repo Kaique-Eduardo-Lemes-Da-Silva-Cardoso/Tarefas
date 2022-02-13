@@ -24,10 +24,15 @@ const App = () => {
 
 
 const addTaskToDatabase = (taskTitle) =>{
-axios.post("",taskTitle)
+  taskTitle = {"title":taskTitle};
+axios.post("http://localhost:3000/CreateTask",taskTitle)
 .then(response =>{
   let data = tasks.concat(response.data)
   console.log(data)
+  setTasks(data);
+  
+
+
 })
 .catch(error => {console.log(error)})
 }
@@ -49,16 +54,18 @@ axios.post("",taskTitle)
   }
   
   const handleTaskAdd = (taskTitle) => {
+addTaskToDatabase(taskTitle);
+// const newtasks = [
+//   ...tasks,
+//   {
+//     title: taskTitle,
+//     id: data.id,
+//     completed: data.completed,
+//   },
+// ];
+// setTasks(newtasks);
+
     
-    const newtasks = [
-      ...tasks,
-      {
-        title: taskTitle,
-        id: Math.floor(Math.random(100) * 100),
-        completed: false,
-      },
-    ];
-    setTasks(newtasks);
   };
 
   const handleTaskDelete = (taskId) => {
