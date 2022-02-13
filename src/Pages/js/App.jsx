@@ -6,31 +6,14 @@ import Tasks from "../../components/js/Tasks";
 import axios from "axios";
 const App = () => {
   const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "learn react",
-      completed: false,
-    },
-    {
-      id: 2,
-      title: "learn sequelise",
-      completed: false,
-    },
-    {
-      id: 3,
-      title: "learn js",
-      completed: true,
-    },
-    {
-      id: 4,
-      title: "learn expo",
-      completed: true,
-    },
+   
+   
+   
   ]);
 
 
   const fetchTasks =  () =>{
-    axios.get("https://jsonplaceholder.typicode.com/todos")
+    axios.get("http://localhost:3000/GetData")
      .then(response => {
        let data = tasks.concat(response.data);
        console.log(data);
