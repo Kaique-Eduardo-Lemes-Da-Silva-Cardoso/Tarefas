@@ -16,7 +16,7 @@ ReactDOM.render(
     
     <Routes>
       <Route path="/" element={<App  />} />
-      <Route path="/Info" element={<Info  />} />
+      <Route path="/Info/:infoID/:header" element={<Info  />} />
      
     </Routes>
   </Router>,

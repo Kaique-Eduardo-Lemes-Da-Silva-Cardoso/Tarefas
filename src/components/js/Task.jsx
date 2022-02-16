@@ -5,7 +5,7 @@ import { CgClose, CgInfo } from "react-icons/cg";
 const Task = ({ task, handleTaskClick, handleTaskDelete }) => {
   let Navigate = useNavigate();
   const N = () => {
-    Navigate(`/info`);
+    Navigate(`/info/${task.infoId}/${task.title}`);
   };
   return (
     <div
