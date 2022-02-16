@@ -15,7 +15,7 @@ const Info = () => {
     //	"TaskId":"d3d31090-c64f-4a66-87d0-2f8a53c7d9b5",
     // "text":"finally it works"
     const text = document.getElementById("nota").value;
-    const update = { TaskID: infoID, text: text };
+    const update = { "infoId": infoID, "text": text };
     console.log(update);
     axios
       .post(`${baseURL}/UpdateInfo`, update)
