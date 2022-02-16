@@ -22,8 +22,11 @@ h1{flex:1;}
     border: solid 4px gray;
     background-color: #444;
     border-radius: 10px;
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
     height: auto;
+    font-size: 18px;
     color:#eee;
 }
 p{color:chartreuse;}
