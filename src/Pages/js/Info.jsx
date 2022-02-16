@@ -11,15 +11,16 @@ const Info = () => {
   console.log(header);
   console.log(infoID);
 
-  const updateInfo = (infoID, text) => {
+  const updateInfo = () => {
     //	"TaskId":"d3d31090-c64f-4a66-87d0-2f8a53c7d9b5",
     // "text":"finally it works"
+    const text = document.getElementById("nota").value;
     const update = { TaskID: infoID, text: text };
-
+    console.log(update);
     axios
       .post(`${baseURL}/UpdateInfo`, update)
       .then((Response) => {
-        console.log(Response.data)
+        console.log(Response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -31,11 +32,12 @@ const Info = () => {
       <div className="container">
         <div className="c">
           <h1>Info</h1>
-    
+
           <div className="btn">
             <Button
-              onClick={() => {
-                Navigate("/");
+              onClick={(infoID) => {
+                updateInfo(infoID);
+               Navigate("/");
               }}
             >
               Voltar
@@ -43,9 +45,11 @@ const Info = () => {
           </div>
         </div>
         <p>{`${header}`}</p>
-        <textarea className="texto" placeholder="Anote aqui...">
-
-        </textarea>
+        <textarea
+          className="texto"
+          placeholder="Anote aqui..."
+          id="nota"
+        ></textarea>
       </div>
     </>
   );
