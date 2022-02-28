@@ -10,7 +10,7 @@
     
   }
   .box {
-   
+   display: flex;
   height: auto;
     flex-direction: column;
   }
