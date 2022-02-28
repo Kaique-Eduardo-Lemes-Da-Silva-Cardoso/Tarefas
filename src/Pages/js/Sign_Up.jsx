@@ -21,7 +21,7 @@ const Sign_Up = () => {
   const handleInputChangeEmail = (e) => {
     setIemail(e.target.value);
   };
-
+const nav = useNavigate();
   const ze =()=> {
     const data = {
       name: Iname,
@@ -34,7 +34,7 @@ const Sign_Up = () => {
       .post(`${baseURL}/CreateUser`, data)
       .then((response) => {
         console.log(response.data);
-       
+       nav("/")
       })
       .catch((error) => {
         console.log(error);

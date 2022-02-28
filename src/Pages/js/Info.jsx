@@ -56,7 +56,7 @@ const Info = () => {
             <Button
               onClick={(infoID) => {
                 updateInfo(infoID);
-                Navigate("/");
+                Navigate("/Task");
               }}
             >
               Voltar

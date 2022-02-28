@@ -20,13 +20,15 @@ const Sign_In = () => {
 
   function ze() {
     const data = {
-      email: Iemail,
-      password: Ipassword,
+      "email": Iemail,
+      "password": Ipassword,
     };
 
     console.log(data);
-    axios.post(`${baseURL}/login`, data).then((response) => {
-      console.log(response);
+    axios.post(`${baseURL}/Login`, data).then((response) => {
+      console.log(response.data);
+      console.log(response.headers);
+      sessionStorage.setItem("token",response.data);
       navegate("/task");
     });
   }

@@ -9,8 +9,13 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
 
   const fetchTasks = () => {
+   
+
     axios
-      .get("http://localhost:3000/GetData")
+      .get("http://localhost:3000/GetData",{
+        headers: {
+          Authorization: 'Bearer ' + sessionStorage.getItem("token") //the token is a variable which holds the token
+        }})
       .then((response) => {
         let data = tasks.concat(response.data);
         console.log(data);
@@ -24,7 +29,10 @@ const App = () => {
   const addTaskToDatabase = (taskTitle) => {
     taskTitle = { title: taskTitle };
     axios
-      .post("http://localhost:3000/CreateTask", taskTitle)
+      .post("http://localhost:3000/CreateTask", taskTitle,{
+        headers: {
+          Authorization: 'Bearer ' + sessionStorage.getItem("token") //the token is a variable which holds the token
+        }})
       .then((response) => {
         let data = tasks.concat(response.data);
         console.log(data);
