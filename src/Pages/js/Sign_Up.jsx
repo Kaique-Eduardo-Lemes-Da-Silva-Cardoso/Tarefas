@@ -3,9 +3,11 @@ import Button from "../../components/js/Button";
 import { useNavigate, useParams } from "react-router-dom";
 import "../css/Sign_up.css";
 import axios from "axios";
+
 import { CgList } from "react-icons/cg";
 const baseURL = "http://localhost:3000";
 const Sign_Up = () => {
+    let Navigate = useNavigate();
   const [Iemail, setIemail] = useState("");
   const [Ipassword, setIpassword] = useState("");
   const [Iname, setIname] = useState("");
@@ -20,13 +22,22 @@ const Sign_Up = () => {
     setIemail(e.target.value);
   };
 
-  function ze() {
+  const ze =()=> {
     const data = {
       name: Iname,
       email: Iemail,
       password: Ipassword,
     };
     console.log(data);
+    axios
+      .post(`${baseURL}/CreateUser`, data)
+      .then((response) => {
+        console.log(response.data);
+        Navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   return (
