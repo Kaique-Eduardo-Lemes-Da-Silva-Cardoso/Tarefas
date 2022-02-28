@@ -26,6 +26,7 @@ const Sign_Up = () => {
     const data = {
       name: Iname,
       email: Iemail,
+      admin:false,
       password: Ipassword,
     };
     console.log(data);
@@ -33,7 +34,7 @@ const Sign_Up = () => {
       .post(`${baseURL}/CreateUser`, data)
       .then((response) => {
         console.log(response.data);
-        Navigate("/");
+       
       })
       .catch((error) => {
         console.log(error);

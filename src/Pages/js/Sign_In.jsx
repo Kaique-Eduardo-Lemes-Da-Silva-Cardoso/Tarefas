@@ -9,7 +9,7 @@ const Sign_In = () => {
   const [Iemail, setIemail] = useState("");
   const [Ipassword, setIpassword] = useState("");
   const [Iname, setIname] = useState("");
-
+  let navegate = useNavigate();
   const handleInputChangePassword = (e) => {
     setIpassword(e.target.value);
   };
@@ -23,7 +23,12 @@ const Sign_In = () => {
       email: Iemail,
       password: Ipassword,
     };
+
     console.log(data);
+    axios.post(`${baseURL}/login`, data).then((response) => {
+      console.log(response);
+      navegate("/task");
+    });
   }
   return (
     <>
@@ -50,7 +55,18 @@ const Sign_In = () => {
             placeholder="Password"
             className="input"
           />
-          <Link style={{color:"chartreuse",marginBottom:30,marginLeft:"auto",marginRight:"auto"}} to={"/Sign_Up"}>  Sign Up</Link>
+          <Link
+            style={{
+              color: "chartreuse",
+              marginBottom: 30,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+            to={"/Sign_Up"}
+          >
+            {" "}
+            Sign Up
+          </Link>
           <Button onClick={ze}>Sign In</Button>
         </div>
       </div>
