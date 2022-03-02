@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../components/js/Button";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import "../css/Base.css";
 import "../css/Sign_in.css";
 import axios from "axios";
 import { CgList } from "react-icons/cg";

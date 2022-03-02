@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "../css/Base.css";
 import "../css/App.css";
 import AddTask from "../../components/js/AddTask";
 import Tasks from "../../components/js/Tasks";

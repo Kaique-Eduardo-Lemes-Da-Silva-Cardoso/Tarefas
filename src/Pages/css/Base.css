@@ -1,0 +1,13 @@
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 2px solid chartreuse;
+  padding: 30px;
+  border-radius: 10px;
+
+  background: linear-gradient(145deg, #1c1f20, #212427);
+  box-shadow:  50px 50px 100px #0c0e0e,
+               -50px -50px 100px #32363a;
+}
