@@ -18,6 +18,7 @@ h1 {
   background: #1f2224;
   box-shadow: inset -5px 5px 10px #0c0e0e, inset 5px -5px 10px #32363a;
   outline: 0;
+  text-align: center;
   border-radius: 10px;
   max-width: 100%;
   min-width: 100%;

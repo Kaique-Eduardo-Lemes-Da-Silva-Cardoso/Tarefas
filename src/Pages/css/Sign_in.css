@@ -7,12 +7,12 @@
   text-align: center;
 }
 
-.input{
+.input {
   height: 40px;
   padding: 0 10px;
   border-radius: 58px;
   border: none;
-
+  text-align: center;
   background: #1f2224;
   box-shadow: inset 12px 12px 7px #1a1c1e, inset -12px -12px 7px #24282a;
   color: #eee;
@@ -25,10 +25,11 @@
   padding: 0 10px;
   border-radius: 58px;
   border: none;
-outline: 0;
+  outline: 0;
+  text-align: center;
   background: #1f2224;
   box-shadow: inset 12px 12px 7px #1a1c1e, inset -12px -12px 7px #24282a,
-  -5px 5px 5px #1bfd9c, 5px -5px 5px #1bfd9c;
+    -5px 5px 5px #1bfd9c, 5px -5px 5px #1bfd9c;
   color: #eee;
   font-size: 16px;
 
