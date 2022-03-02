@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Button from "../../components/js/Button";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/Base.css";
 import "../css/Sign_in.css";
 import axios from "axios";
@@ -9,7 +9,8 @@ const baseURL = "http://localhost:3000";
 const Sign_In = () => {
   const [Iemail, setIemail] = useState("");
   const [Ipassword, setIpassword] = useState("");
-  const [Iname, setIname] = useState("");
+  
+  
   let navegate = useNavigate();
   const handleInputChangePassword = (e) => {
     setIpassword(e.target.value);
@@ -18,6 +19,8 @@ const Sign_In = () => {
   const handleInputChangeEmail = (e) => {
     setIemail(e.target.value);
   };
+
+
 
   function ze() {
     const data = {
@@ -58,7 +61,7 @@ const Sign_In = () => {
             placeholder="Password"
             className="input"
           />
-          <Link
+          <Link 
             style={{
               color: "chartreuse",
               marginBottom: 30,
@@ -72,6 +75,8 @@ const Sign_In = () => {
           </Link>
           <Button onClick={ze}>Sign In</Button>
         </div>
+    
+       
       </div>
     </>
   );

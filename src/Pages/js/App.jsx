@@ -110,7 +110,7 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <h1>Minhas Tarefas</h1>
+        <h1 className="font-extrabold text-3xl">Minhas Tarefas</h1>
         <AddTask handleTaskAdd={handleTaskAdd} />
         <Tasks
           tasks={tasks}

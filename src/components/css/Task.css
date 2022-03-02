@@ -15,11 +15,16 @@
 .delete,
 .info {
   background-color: transparent;
-  font-size: large;
+ font-size: large;
   color: chartreuse;
   border-radius: 100px;
   border: none;
   cursor: pointer;
 }
 .Tbox {
+  justify-content: space-between;
+  display: flex;
+  
+  width: 15%;
+  
 }

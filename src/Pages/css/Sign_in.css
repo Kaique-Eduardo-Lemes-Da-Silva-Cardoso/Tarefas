@@ -6,6 +6,7 @@
 .input::-webkit-input-placeholder {
   text-align: center;
 }
+
 .input{
   height: 40px;
   padding: 0 10px;

@@ -51,7 +51,7 @@ const Info = () => {
     <>
       <div className="container">
         <div className="c">
-          <h1>Info</h1>
+          <h1 className="text-4xl">Info</h1>
 
           <div className="btn">
             <Button
@@ -64,7 +64,7 @@ const Info = () => {
             </Button>
           </div>
         </div>
-        <p>{`${header}`}</p>
+        <p className="text-xl mt-5 mb-10">{`${header}`}</p>
         <textarea
           className="texto"
           placeholder="Anote aqui..."
