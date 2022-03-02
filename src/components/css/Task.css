@@ -1,25 +1,25 @@
-.task-container{
-    background-color: #444;
-    margin: 8px 0;
-    padding: 15px 20px;
-    display:flex;
-    border-radius: 5px;
-    justify-content: space-between;
-    color:#EEE;
-    align-items: center;
-  
+.task-container {
+  background: linear-gradient(225deg, #212427, #1c1f20);
+  box-shadow: -5px 5px 10px #0c0e0e, 5px -5px 10px #32363a;
+  margin: 8px 0;
+  padding: 15px 20px;
+  display: flex;
+  border-radius: 5px;
+  justify-content: space-between;
+  color: #eee;
+  align-items: center;
 }
-.title{
-    cursor: pointer;
+.title {
+  cursor: pointer;
 }
-.delete, .info{
-    background-color:transparent;
-    font-size: large;
-    color: chartreuse;
-    border-radius: 100px;
-    border: none;
-    cursor: pointer;
+.delete,
+.info {
+  background-color: transparent;
+  font-size: large;
+  color: chartreuse;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
 }
-.Tbox{
-
+.Tbox {
 }

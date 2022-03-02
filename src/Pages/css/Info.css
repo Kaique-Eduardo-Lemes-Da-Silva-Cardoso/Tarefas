@@ -1,21 +1,28 @@
-.btn{
-    flex:1;
+.btn {
+  flex: 1;
 }
-h1{flex:1;}
+h1 {
+  flex: 1;
+}
 
-.c{
-    display: flex; justify-content: space-between;
-    align-items: center;
+.c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.texto{
-    border: solid 4px gray;
-    background-color: #444;
-    border-radius: 10px;
-    max-width: 100%;
-    min-width: 100%;
-    min-height: 150px;
-    height: auto;
-    font-size: 18px;
-    color:#eee;
+.texto {
+  border: none;
+  background: #1f2224;
+  box-shadow: inset -5px 5px 10px #0c0e0e, inset 5px -5px 10px #32363a;
+  outline: 0;
+  border-radius: 10px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  height: auto;
+  font-size: 18px;
+  color: #eee;
 }
-p{color:chartreuse;}
+p {
+  color: chartreuse;
+}
